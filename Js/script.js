@@ -22,10 +22,10 @@ let songs = [
 ]
 
 songItems.forEach((element,i) => {
-    console.log(element,i);
+    // console.log(element,i);
     element.getElementsByTagName("img")[0].src = songs[i].coverpath;
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
-});
+})
 
 //Handle play/pause click
 masterPlay.addEventListener('click',()=>{
@@ -52,4 +52,19 @@ audioElement.addEventListener('timeupdate',()=>{
 
 myProgressBar.addEventListener('change',()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
+});
+
+const makeAllPlays =()=>{
+    Array.from(document.getElementsByClassName('songItemPlay')).forEach(element)=>{
+       element.classList.add('fa-circle-pause');
+
+    })
+}
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+    element.addEventListener('click',(e)=>{
+      makeAllPlays();
+        e.target.classList.remove('fa-circle-play');
+        e.target.classList.add('fa-circle-pause')
+    })
 })
