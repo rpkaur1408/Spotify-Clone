@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-   
 }
 
 body{
@@ -96,7 +95,7 @@ margin-left:40px ;
 }
 .songInfo{
     position:absolute;
-    left: 10vw;
+    left: 12vw;
     font-family: 'ubuntu', sans-serif;
 }
 .songInfo img{
