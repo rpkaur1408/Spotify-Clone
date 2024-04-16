@@ -1,6 +1,6 @@
 console.log("Welcome to Spotify");
 //Welcome to Spotify
-//adding a comment
+
 
 let songIndex = 0;
 let audioElement = new Audio('../songs/1.mp3');
